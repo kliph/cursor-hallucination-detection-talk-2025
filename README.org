@@ -25,6 +25,6 @@ Other ways exist and this is an active subject of research
 - Major inaccuracies :: answering "no" to the question "Is this sentence related to the context?"
 - Minor inaccuracies :: "Is this sentence factual (in relation to some context/documents)?" which are assessed in series after determining that the sentence does not contain major inaccuracies
 ** Is it useful?
-- Yes, in cases where
+- [[https://github.com/explodinggradients/ragas/blob/main/ragas/src/ragas/metrics/_context_recall.py#L51][Yes]], in cases where
 	- real-time accuracy is important
 	- humans are not in the loop
