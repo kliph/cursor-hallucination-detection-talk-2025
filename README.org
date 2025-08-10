@@ -1,0 +1,30 @@
+* Unsupervised hallucination detection
+** What's hallucination?
+An [[https://en.m.wikipedia.org/wiki/Anthropomorphism][anthropomorphized]] term for an observed tendency of [[https://en.m.wikipedia.org/wiki/Large_language_model][Large Language Models]] (LLMs) to output content that is factually incorrect, nonsensical, or not entailed based on human interpretation of the prompt provided to the LLM.
+
+** Hallucination examples
+What is the capital of Pennsylvania?
+
+- Factually incorrect
+	- "The capital of Pennsylvania is Philadelphia"
+- Nonsensical
+	- "The capital abc13jskiay ; /a"
+- Not entailed
+	- "The capital of France is Paris"
+** How can it be prevented?
+One way is
+
+- [[https://arxiv.org/abs/2303.08896][SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models]]
+  - Manakul et al., 2023
+	- https://arxiv.org/pdf/2303.08896
+	- Performance similar to human raters
+
+Other ways exist and this is an active subject of research
+** How does it work?
+- Hallucinations are operationalized as Major and Minor Inaccuracies
+- Major inaccuracies :: answering "no" to the question "Is this sentence related to the context?"
+- Minor inaccuracies :: "Is this sentence factual (in relation to some context/documents)?" which are assessed in series after determining that the sentence does not contain major inaccuracies
+** Is it useful?
+- Yes, in cases where
+	- real-time accuracy is important
+	- humans are not in the loop
